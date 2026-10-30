@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: #0b1020;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: #11182c;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #5eead4;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #5eead4;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #172554, #4c1d95, #0f766e);
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.15;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #5eead4;
+        }
+
+        .tag {
+            color: #facc15;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #e2e8f0;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 25px;
+            background: #5eead4;
+            color: #0b1020;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #5eead4;
+        }
+
+        .about {
+            background: #11182c;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: #172036;
+            padding: 25px;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #5eead4;
+        }
+
+        .card h3 {
+            color: #facc15;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, #172554, #312e81);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #070b16;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 20px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+
+            .hero, section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">MyPortfolio.</div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <div class="tag">CLOUD • AWS • DEVOPS</div>
+            <h1>Hello, I'm <span>Your Name</span></h1>
+            <h2>Aspiring Cloud & DevOps Engineer</h2>
+            <p>
+                I am learning AWS, Docker, Linux and DevOps.
+                I enjoy building cloud projects and turning ideas into reality.
+            </p>
+            <a class="btn" href="#projects">Explore My Projects</a>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am passionate about cloud computing and automation.
+            My goal is to build reliable, scalable applications using
+            AWS and modern DevOps tools.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>☁️ AWS Cloud</h3>
+                <p>EC2, S3, IAM, VPC and Lambda fundamentals.</p>
+            </div>
+            <div class="card">
+                <h3>🐳 Docker</h3>
+                <p>Images, containers, Dockerfiles and port mapping.</p>
+            </div>
+            <div class="card">
+                <h3>🐧 Linux</h3>
+                <p>Linux commands, packages, files and permissions.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ DevOps</h3>
+                <p>Git, GitHub, CI/CD concepts and automation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🚀 Docker Portfolio</h3>
+                <p>A colourful website hosted using Nginx in an Ubuntu container.</p>
+            </div>
+            <div class="card">
+                <h3>☁️ AWS Cloud Project</h3>
+                <p>My hands-on practice with AWS cloud services.</p>
+            </div>
+            <div class="card">
+                <h3>🔧 DevOps Lab</h3>
+                <p>Learning Git, Linux and deployment automation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Let's Connect!</h2>
+        <p>Interested in cloud technology and new opportunities.</p>
+        <p style="margin: 15px 0 25px;">
+            Email: your-email@example.com
+        </p>
+        <a class="btn" href="mailto:your-email@example.com">
+            Contact Me
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name | Built with HTML, CSS, Ubuntu & Docker</p>
+    </footer>
+</body>
+</html>
